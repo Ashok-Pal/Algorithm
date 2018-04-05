@@ -1,0 +1,210 @@
+ <div class="xpanel-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="assets/img/graphics.png" class="image-responsive" />
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: justify">
+                                                This interactive calculator allows you to input values in order to create a unique investment scenario and performance expectation under the terms of this partnership.
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-top: 15px">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <span class="tool" title="Partnership Name: LC GoOpCo Manuel #1, LP &#013;&#010;Total Raise: $850,000 &#013;&#010;Total Net Revenue Interest (NRI): 56.25% &#013;&#010;Unit Cost: $170,000 &#013;&#010;Number of Units: 5">
+                                                                <b>
+                                                                    LC GoOpCo Manuel #1, LP
+                                                                </b>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        Throckmorton County, Texas
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <ul>
+                                                            <li>Vertical Well - 6000' TD</li>
+                                                            <li>Turn Key Drill and Test</li>
+                                                            <li>Full IDC Tax Benefits</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        Total Raise:
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        {{ investment_amount | currency:'USD' : true : '2.0-0' }}
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        Terms:
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        {{ nri_percentage | percent:'2.2-2' }} NRI (Net Revenue Interest)
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        5 Units:
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        $170,000 Per Unit
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 15px; text-align: justify">
+                                                    <div class="col-md-12">
+                                                        Each Unit in the program is the economic equivalent of: 14.85% WI and 11.1375% NRI, in the Manuel #1 well.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="border-top: 1px solid #CDCDCD">
+                                <div class="row" style="margin-top:25px;">
+                                    <div class="col-md-6" style="border-right: 1px solid #CDCDCD">
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Est. Daily Oil Production:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Estimated_oil_model" min="0" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold">BO &nbsp;&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Est. Daily Gas Production:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Estimated_gas_model" min="0" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold">MCF</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Your Est. Oil Price:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Estimated_oil_price_model" min="0" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold; font-size: 16px">&nbsp;&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Your Est. Gas Price:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Estimated_gas_price_model" min="0" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold; font-size: 16px">&nbsp;&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Operating Expenses Ratio:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" min="0" max="100" [(ngModel)]="Operating_Expenses_Ratio" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold; font-size: 16px">&nbsp;% &nbsp;&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Oil-Est. Ultimate Recovery:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Estimated_Oil_ultimate_recovery_model" min="0" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold">BO &nbsp;&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-5">
+                                                <b>Gas-Est. Ultimate Recovery:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Estimated_Gas_ultimate_recovery_model" min="0" (change)="hypothetical()" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold">MCF</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">
+                                                <b>Hypothetical Investment Amount:</b>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="number" [(ngModel)]="Hypothetical_investment_model" min="0" (change)="hypothetical()" min="0" class="form-control" />
+                                                    <span class="input-group-addon" style="font-weight:bold">&nbsp;$&nbsp;&nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">Unit Equivalent:</div>
+                                            <div class="col-md-6">{{ unit }}</div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">Net Revenue Interest (NRI):</div>
+                                            <div class="col-md-6">{{ Net_Revenue_model | percent }}</div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">Est. Monthly Income:</div>
+                                            <div class="col-md-6">{{ Potential_Monthly_model | currency:'USD' : true : '2.2-2' }}</div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">Months to payout:</div>
+                                            <div class="col-md-6">{{ Months_to_model | number : '1.1-1' }}</div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">Est. Months of Cash Flow:
+                                                <i class="glyphicon glyphicon-question-sign" title="Total Potential Months of Cash Flow = (Total Potential Cash Flow/ Potential Monthly Income)"></i>
+                                            </div>
+                                            <div class="col-md-6">{{ Months_to_cash_flow | number : '1.1-1' }}</div>
+                                        </div>
+                                        <div class="row" style="min-height:45px">
+                                            <div class="col-md-6">Est. Net Cash Flow:</div>
+                                            <div class="col-md-6">{{ Total_Potential_model | currency:'USD' : true : '1.2-2' }} &nbsp;&nbsp;
+                                                <b>ROI &nbsp;&nbsp;
+                                                        <span class="greenColor">{{ roi_percent }}</span>
+                                                    </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p>&nbsp;</p>
+                                        <p><i><b>Please Note:</b> this tool is a basic model offered to help investors in evaluating their potential investment. Results are not indicative of actual returns and may vary significantly. Factors including, but not limited to, commodity prices, production expenses, operating costs etc. will cause actual return to differ from projections.</i></p>
+                                    </div>
+                                </div>
+                            </div>
